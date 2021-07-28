@@ -1,0 +1,5 @@
+@PACKAGE_INIT@ 
+
+set_and_check(sayhi_INCLUDE_DIR "@PACKAGE_sayhi_INCLUDE_DIR@")
+
+include("${CMAKE_CURRENT_LIST_DIR}/sayhi-export.cmake")
