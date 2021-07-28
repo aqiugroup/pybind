@@ -1,0 +1,7 @@
+from distutils.core import setup
+
+setup(name='sayhi',
+      version='0.0.0',
+      packages=['sayhi'],
+      package_dir={'sayhi': '${SAYHI_WRAPPER_PATH}'},
+      package_data={'sayhi': ['${SAYHI_WRAPPER_FILE_NAME}', 'libsayhi*', 'sayhi*']})
