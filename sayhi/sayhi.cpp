@@ -6,9 +6,10 @@
  */
 
 #include <sayhi/sayhi.h>
+
 #include <iostream>
 
 void SayHi()
 {
-  std::cout << "You're here : SayHi to world!" << std::endl;  
+    std::cout << "You're here : SayHi to world!" << std::endl;
 }
