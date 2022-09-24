@@ -1,3 +1,4 @@
+#include <sayhi/config.h>
 #include <sayhi/sayhi.h>
 
 #include <iostream>
@@ -9,6 +10,12 @@ int main(int argc, char* argv[])
     }
 
     SayHi();
+
+#ifdef SAYHI_USE_DEBUG
+    std::cout << "sayhi_use_debug is true!" << std::endl;
+#else
+    std::cout << "sayhi_use_debug is false!" << std::endl;
+#endif
 
     return 0;
 }

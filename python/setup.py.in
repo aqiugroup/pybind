@@ -1,4 +1,10 @@
-from distutils.core import setup
+try:
+    from setuptools import setup, find_packages
+except ImportError:
+    from distutils.core import setup, find_packages
+
+packages = find_packages(where=".")
+print("PACKAGES: ", packages)
 
 setup(name='sayhi',
       version='0.0.0',
