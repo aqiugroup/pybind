@@ -29,7 +29,7 @@ option(SAYHI_WITH_DEBUG "Enable/Disable DEBUG" ON)
 # python python wrapper
 # option不能在CMakeLists.txt中修改，只有第一次生效；相反可以通过命令行设置
 # cmake.. -DSAYHI_BUILD_PYTHON_PACKAGE=ON
-option(SAYHI_BUILD_PYTHON_PACKAGE "Build wrapper for Python package" OFF)
+option(SAYHI_BUILD_PYTHON_PACKAGE "Build wrapper for Python package" ON)
 # 假设不清理编译空间的话，可以用下面的命令调试
 # set(SAYHI_BUILD_PYTHON_PACKAGE ON CACHE BOOL "Build wrapper for Python package" FORCE)
 

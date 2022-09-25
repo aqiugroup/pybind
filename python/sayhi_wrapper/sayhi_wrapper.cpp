@@ -9,10 +9,17 @@
 #include <pybind11/stl.h>
 #include <sayhi/sayhi.h>
 
+using namespace sayhi;
 namespace py = pybind11;
 
-void wrap_sayhi(py::module& m)
+int AddTwoNum(int i, int j)
+{
+    return i + j;
+}
+
+void wrap_function(py::module& m)
 {
     m.doc() = "pybid11 sayhi demo.";
     m.def("SayHi", &SayHi, "SayHi function.");
+    m.def("AddTwoNum", &AddTwoNum, pybind11::arg("i") = 1, pybind11::arg("j") = 2, "Add two num");
 }

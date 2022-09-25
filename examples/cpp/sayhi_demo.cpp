@@ -9,7 +9,7 @@ int main(int argc, char* argv[])
         std::cout << "argc " << argc << " argv[0] " << argv[0] << std::endl;
     }
 
-    SayHi();
+    sayhi::SayHi();
 
 #ifdef SAYHI_USE_DEBUG
     std::cout << "sayhi_use_debug is true!" << std::endl;

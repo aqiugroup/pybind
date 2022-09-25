@@ -12,9 +12,14 @@ namespace py = pybind11;
 // parts
 
 // sayhi for later flexibility
-void wrap_sayhi(py::module& m);
+void wrap_function(py::module& m);
+void wrap_class(py::module& m);
 
 PYBIND11_MODULE(_sayhi_py_wrapper, module)
 {
-    wrap_sayhi(module);
+    // 1 wrap normal function
+    wrap_function(module);
+
+    // 2 wrap class
+    wrap_class(module);
 }
