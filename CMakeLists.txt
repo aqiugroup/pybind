@@ -47,7 +47,7 @@ option(SAYHI_BUILD_SHARED_LIB "Build shared lib if ON, static lib if OFF" ON)
 
 # python wrapper cannot be compiled with static lib, since static lib is compiled without -fPIC
 if(SAYHI_BUILD_PYTHON_PACKAGE AND NOT SAYHI_BUILD_SHARED_LIB)
-  message(FATAL_ERROR "Python wrapper cannot be compiled with static lib" )
+    message(FATAL_ERROR "Python wrapper cannot be compiled with static lib" )
 endif()
 
 #######################################
@@ -56,16 +56,16 @@ endif()
 
 # GNU gcc
 if(${CMAKE_CXX_COMPILER_ID} STREQUAL GNU)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Werror -Wextra")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Werror -Wextra -Wreturn-type")
 
 # Clang
 elseif(${CMAKE_CXX_COMPILER_ID} STREQUAL Clang)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Werror -Wextra")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Werror -Wextra -Wreturn-type")
 
 # Visual stdio
 elseif(${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
-  # use math macro
-  add_definitions("-D _USE_MATH_DEFINES")
+    # use math macro
+    add_definitions("-D _USE_MATH_DEFINES")
 endif()
 
 #######################################
